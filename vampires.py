@@ -35,10 +35,19 @@ class Vampires:
         self.in_coffin = True
         return
 
-vampire1 = Vampires.create('Dracula', 100, False, False)
-vampire2 = Vampires.create('Wife of Dracula', 99, True, True)
-vampire3 = Vampires.create('Blade', 35, True, False)
+dracula = Vampires.create('Dracula', 100, False, False)
+wife_dracula = Vampires.create('Wife of Dracula', 99, True, True)
+blade = Vampires.create('Blade', 35, True, False)
 
 print(Vampires.coven)
 Vampires.sunrise()
 print(Vampires.coven)
+Vampires.sunset()
+print(wife_dracula.in_coffin)
+print(wife_dracula.drank_blood_today)
+print(blade.in_coffin)
+print(blade.drank_blood_today)
+dracula.go_home()
+print(dracula.in_coffin)
+blade.drink_blood()
+print(blade.drink_blood)
